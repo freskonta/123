@@ -1,0 +1,40 @@
+// Получаем кнопку "Корзина"
+var cartButton = document.querySelector(".menu-items li:last-child a");
+
+// Добавляем обработчик события на кнопку "Корзина"
+cartButton.addEventListener("click", function(event) {
+event.preventDefault(); // Отменяем стандартное действие при клике на ссылку
+
+// Открываем пустое окно корзины
+var cartWindow = window.open("", "cartWindow", "width=400,height=400");
+cartWindow.document.write("<h1>Корзина</h1>");
+cartWindow.document.write("<p>Ваша корзина пуста.</p>");
+});
+// Создаем массив для хранения товаров в корзине
+var cartItems = [];
+
+// Получаем кнопку "Купить" на каждой карточке товара
+var addToCartButtons = document.querySelectorAll(".card-button");
+
+// Добавляем обработчик события на каждую кнопку "Купить"
+addToCartButtons.forEach(function(button) {
+button.addEventListener("click", function() {
+// Получаем информацию о товаре
+var card = button.closest(".card");
+var name = card.querySelector(".card-name").textContent;
+var price = card.querySelector(".card-cat span:first-child").textContent;
+var quantity = card.querySelector("#quantity").value;
+
+// Добавляем товар в корзину
+var item = { name: name, price: price, quantity: quantity };
+cartItems.push(item);
+
+// Обновляем содержимое корзины
+updateCart();
+});
+});
+
+
+
+
+
