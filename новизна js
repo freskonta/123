@@ -1,0 +1,7 @@
+$(document).ready(function() {
+    $(".button-filter[data-price='new']").click(function() {
+      $(".card").sort(function(a, b) {
+        return $(b).find(".new").length - $(a).find(".new").length;
+      }).appendTo(".catalog");
+    });
+  });
