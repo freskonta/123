@@ -1,0 +1,22 @@
+// Получаем кнопку "Купить" на каждой карточке товара
+var addToCartButtons = document.querySelectorAll(".card-button");
+
+// Добавляем обработчик события на каждую кнопку "Купить"
+addToCartButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Открываем модальное окно
+    $("#myModal").modal("show");
+    
+    // Получаем выбранное количество товара и добавляем его в корзину
+    var addToCartButton = document.getElementById("addToCart");
+    addToCartButton.addEventListener("click", function() {
+      var quantity = document.getElementById("quantity").value;
+      // Добавляем выбранное количество товара в корзину
+      // ...
+      // Закрываем модальное окно
+      $("#myModal").modal("hide");
+    });
+  });
+});
+
+
