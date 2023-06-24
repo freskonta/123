@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="jquery-3.6.3.min.js"></script>
+        <title>Document</title>
+        </head>
+        <body>
+            <nav class="navbar fixed-top sticky-top navbar-expand-md navbar-light mt-3">
+                <div class="container menu">
+                    <img src="images/Еда в дом..png" alt="" class="navbar-brand">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav menu-items">
+                            <li> <a class="menu-item" href="#">Главная</a></li>
+                            <li> <a class="menu-item" href="#">Каталог</a></li>
+                            <li> <a class="menu-item" href="#">Новые продукты</a></li>
+                            <li> <a class="menu-item" href="#">О нас</a></li>
+                            <li> <a class="menu-item" href="#">Контакты</a></li>
+                            <li> <a class="menu-item" href="#">Корзина</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+                
+                <div class="container">
+                    <h1 class="h-1">
+                    Наше <span style="color:green"><em>меню</em></span>
+                </h1>
+                    <div class="filter">
+                        <button id="button" class="button-filter" data-price="asc" data-price="All">По цене</button>
+                        <div class="img-filter"><img src="images/Vector2.png" class="img-2"></div>
+                        <button id="button" class="button-filter" data-price="desc" data-price="Sony"> По цене</button>
+                        <div class="img-filter"><img src="images/Vector.png" class="img-2"></div>
+                        <button id="button" class="button-filter" data-price="new" data-price="Google">Сначала новинки</button>
+                        
+                    </div>
+                </div>
+            <div class="catalog">
+                <div class="card">
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/one-fresh-red-tomato-isolated-white-removebg-preview 1.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Помидоры</span>
+                        <span>80₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                        <button class="card-button" data-toggle="modal" data-target="#myModal">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="meat"><img src="images/25% скидка.png" class></button>
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/raw-meat-removebg-preview 1.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Мясо</span>
+                        <span>600₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/Картошка.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Картофель</span>
+                        <span>60₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="new"><img src="images/new.png" ></div>
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/капуста.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Капуста</span>
+                        <span>60₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="meat"><img src="images/25% скидка.png" class></button>
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/огурцы.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Огурцы</span>
+                        <span>55₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/бананы.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Бананы</span>
+                        <span>120₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="new"><img src="images/new.png" ></div>
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/лук.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Лук</span>
+                        <span>40₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <button class="img-heart"><img src="images/Heart.png"></button>
+                    <div class="card-img"><img src="images/орехи.png" alt="" class="img-1"></div>
+                    <div class="card-cat">
+                        <span>Нуд</span>
+                        <span>120₽/кг</span>
+                    </div> 
+                    <div class="card-name">Lorem ipsum is simly dummy text <br> 
+                    of the priting and typesetting <br> idustry. </div>
+                    <div class="card-block">
+                    <button class="card-button">КУПИТЬ</button>
+                    </div>
+                </div>
+                
+                    </div>
+                    <div class="footer" >
+                        <h2 class="footer-text">Присоединяйтесь к нам и <br> получите скидку до 50%</h2>
+                        <h3 class="footer-text2">Lorem ipsum is simly dummy text 
+                            of the priting and typesetting  idustry.</h3>
+                        <input type="text" name="" id="" class="footer-input" placeholder="Введите email">
+                        <button id="button" class="button-footer" data-footer=">">Войти</button>
+                    </div>
+  <!-- Модальное окно для карточки товара -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Заголовок модального окна -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выберите количество товара</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Основное содержимое модального окна -->
+        <div class="modal-body">
+          <p>Введите количество товара:</p>
+          <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+        
+        <!-- Футер модального окна -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" id="addToCart">Добавить в корзину</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cart"></div>
+
+ 
+
+                    <script src="bootstrap.js"></script>
+                    <script> src="js/loading.js"</script>
+                    <script src="js/price.js"></script>
+                    <script src="js/new.js"></script>
+                    <script src="heart.js"></script>
+                    <script src="modal.js"></script>
+                    <script src="js/modal.js"></script>   
+                    <script src="korzina.js"></script>
+                    </body>
+        </html>
+        
