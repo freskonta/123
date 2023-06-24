@@ -1,0 +1,43 @@
+// Получаем все карточки товаров в каталоге
+const catalog = document.querySelector('.catalog');
+const cards = catalog.querySelectorAll('.card');
+
+// Получаем кнопки "По цене" и "По цене2"
+const priceButton = document.querySelector('.button-filter[data-price="asc"]');
+const price2Button = document.querySelector('.button-filter[data-price="desc"]');
+
+// Добавляем обработчики событий на кнопки
+priceButton.addEventListener('click', sortByPrice);
+price2Button.addEventListener('click', sortByPrice2);
+
+// Функция сортировки каталога по цене
+function sortByPrice() {
+  // Преобразуем коллекцию карточек товаров в массив
+  const cardsArray = Array.from(cards);
+  // Сортируем массив по возрастанию цены
+  cardsArray.sort((a, b) => {
+    const aPrice = Number(a.querySelector('.card-cat span:last-child').textContent.replace('₽/кг', ''));
+    const bPrice = Number(b.querySelector('.card-cat span:last-child').textContent.replace('₽/кг', ''));
+    return aPrice - bPrice;
+  });
+  // Удаляем все карточки из каталога
+  catalog.innerHTML = '';
+  // Добавляем отсортированные карточки в каталог
+  cardsArray.forEach(card => catalog.appendChild(card));
+}
+
+// Функция сортировки каталога по цене2
+function sortByPrice2() {
+  // Преобразуем коллекцию карточек товаров в массив
+  const cardsArray = Array.from(cards);
+  // Сортируем массив по убыванию цены
+  cardsArray.sort((a, b) => {
+    const aPrice = Number(a.querySelector('.card-cat span:last-child').textContent.replace('₽/кг', ''));
+    const bPrice = Number(b.querySelector('.card-cat span:last-child').textContent.replace('₽/кг', ''));
+    return bPrice - aPrice;
+  });
+  // Удаляем все карточки из каталога
+  catalog.innerHTML = '';
+  // Добавляем отсортированные карточки в каталог
+  cardsArray.forEach(card => catalog.appendChild(card));
+}
